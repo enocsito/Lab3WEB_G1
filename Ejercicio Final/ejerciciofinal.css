@@ -1,79 +1,82 @@
+
 :root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-    --pink: #ff69b4;
-    --green: #32cd32;
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --pink: #E12AFB;
+  --green: #1f881f;
 }
 
-.box {
-    display: flex;
-    background-color: var(--pink);
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.box div {
-    margin: 10px 5px;
-    border-radius: 8px;
-    padding: 5px;
-    background-color: var(--blue);
-    width: 33%;
-}
-
-.box div:first-child {
-    width: 64%;
-}
-
-.item-a {
-    grid-area: header;
-    background-color: var(--blue);
-}
-
-.item-b {
-    grid-area: main;
-    background-color: var(--pink);
-}
-
-.item-c {
-    grid-area: sidebar;
-    background-color: var(--blue);
-}
-
-.item-d {
-    grid-area: footer;
-    background-color: var(--green);
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header header header header"
-        "main main . sidebar"
-        "footer footer footer footer";
-}
-
-.my-element {
-  height: 100px;
-  background-color: var(--pink);
-  color:  var(--white)
-}
-
-.my-element-animate {
-  width: 30%;
-  height: 50px;
-  background-color: var(--blue);
+.shopping-cart {
+  background-color: var(--white);
+  border: 2px solid var(--blue);
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 10px;
+  font-family: sans-serif;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
   animation: slideIn 3s ease-in-out;
 }
 
+.shopping-cart h2 {
+  color: var(--blue);
+  text-align: center;
+}
+
+.shopping-cart ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.shopping-cart li {
+  display: flex;
+}
+
+.shopping-cart img {
+  margin-left: 35px;
+  border-radius: 10px;
+}
+
+.shopping-cart p {
+  font-size: 18px;
+}
+
+.btn-pay {
+  display: inline-block;
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-pay:hover {
+  background-color: rgb(107, 183, 237);
+}
+
+.btn-pay:active {
+  transform: scale(0.95);
+}
+
+a[href="https://uca.edu.sv/"]:hover {
+  color: #6bb7ed;
+  transition: color 0.3s ease;
+}
+
 @keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
+  from {
+    transform: translateY(-100%);
     opacity: 0;
   }
-  100% {
-    transform: translateX(0);
+
+  to {
+    transform: translateY(0);
     opacity: 1;
   }
 }
+
